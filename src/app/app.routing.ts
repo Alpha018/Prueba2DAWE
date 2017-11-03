@@ -9,6 +9,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { ErrorComponent } from './error/error.component';
+import { NoticiasComponent } from './noticias/noticias.component';
 
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes =[
     { path: 'signup',           component: SignupComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
+    { path: 'noticias',         component: NoticiasComponent},
     { path: '**',               component: ErrorComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

@@ -1,6 +1,5 @@
-node_modules
-.idea
-__MACOSX
+.idea/
+__MACOSX/
 .idea/typescript-compiler.xml
 .idea/watcherTasks.xml
 .idea/workspace.xml
@@ -14,3 +13,4 @@ node_modules/querystring/test/.index.js.un~
 src/.DS_Store
 src/assets/.DS_Store
 src/assets/img/.DS_Store
+node_modules/
