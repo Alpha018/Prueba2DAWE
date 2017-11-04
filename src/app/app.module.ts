@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
@@ -31,14 +31,14 @@ import { NoticiasComponent } from './noticias/noticias.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    HttpModule,
     NgbModule.forRoot(),
     FormsModule,
     RouterModule,
     AppRoutingModule,
     HomeModule
   ],
-  providers: [],
+  providers: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

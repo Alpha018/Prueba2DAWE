@@ -1,3 +1,24 @@
-<p>
-  noticias works!
-</p>
+<div class="wrapper">
+    <div class="page-header page-header-xs bg-transparent" data-parallax="true" style="background-image: url('../assets/img/antoine-barres.jpg');">
+        <div class="filter">
+            <div >
+                <h1 style="color: white; font-weight: bold">
+                    Noticias
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="card align-items-center section">
+            <ul class="list-group">
+                <li *ngFor="let noticia of noticias.articles" class="list-group-item">
+
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{noticia.title}}</h5>
+                        <small>{{noticia.publishedAt}}</small>
+                    </div>
+                    <img alt="Rounded Image" style="max-width:35%;max-height:35%;" class="img-rounded img-responsive" src="{{noticia.urlToImage}}" />
+                    <br>
+                </li>
+            </ul>
+    </div>
+</div>

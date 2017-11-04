@@ -11,15 +11,16 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 import { ErrorComponent } from './error/error.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 
-const routes: Routes =[
+const routes: Routes = [
     { path: 'home',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'signup',           component: SignupComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
-    { path: 'noticias',         component: NoticiasComponent},
+    { path: 'noticias',         component: NoticiasComponent },
     { path: '**',               component: ErrorComponent},
-    { path: '', redirectTo: 'home', pathMatch: 'full' }
+    { path: '', redirectTo: 'noticias', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
