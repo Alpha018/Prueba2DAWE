@@ -10,6 +10,7 @@ import { LandingComponent } from './landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { ErrorComponent } from './error/error.component';
 import { NoticiasComponent } from './noticias/noticias.component';
+import { NoticiaDetalleComponent } from './noticia-detalle/noticia-detalle.component';
 
 const routes: Routes = [
     { path: 'home',             component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'noticias',         component: NoticiasComponent },
+    { path: 'noticiasdetalle/:autor/:descripcion/:fecha/:titulo/:url/:imagenUrl',         component: NoticiaDetalleComponent },
     { path: '**',               component: ErrorComponent},
     { path: '', redirectTo: 'noticias', pathMatch: 'full' },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
