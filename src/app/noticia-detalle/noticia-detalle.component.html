@@ -1,11 +1,37 @@
 <div class="wrapper">
   <div class="page-header page-header-xs bg-transparent" data-parallax="true" style="background-image: url('../assets/img/antoine-barres.jpg');">
     <div class="filter">
-      <div >
         <h1 style="color: white; font-weight: bold">
-          {{titulo}}
+            Noticias
         </h1>
-      </div>
     </div>
   </div>
+    <div class="filter col-12 text-center section">
+        <h1 style="color: black; font-weight: bold">
+            {{titulo}}
+        </h1>
+    </div>
+    <div class="section profile-content">
+        <div class="container">
+            <div class="owner section">
+                <img src="{{imagenURL}}" style="max-width:80%;max-height:80%;" class="img-rounded img-responsive">
+                <div class="name section col-12">
+                    <h2 class="title">{{autor}}<br /></h2>
+                    <h5 class="description">{{fecha}}</h5>
+                </div>
+                <div class="container text-center">
+                    <div class="tim-title">
+                        <h2>{{descripcion}}</h2>
+                    </div>
+                    <br>
+                    <div class="col-xs-2 col-center-block">
+                        <a href="{{url}}" target="_blank">
+                        <button type="button" class="btn btn-outline-primary btn-round btn-lg">Ver Más</button>
+                        </a>
+                        <button type="button" class="btn btn-outline-primary btn-round btn-lg">Agregar a favoritos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
