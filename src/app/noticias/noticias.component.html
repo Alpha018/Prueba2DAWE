@@ -8,15 +8,33 @@
             </div>
         </div>
     </div>
-    <div class="card align-items-center section">
+    <div class="card content-center section">
+
             <ul class="list-group">
                 <li *ngFor="let noticia of noticias.articles" class="list-group-item">
+                    <div class="row">
 
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{{noticia.title}}</h5>
-                        <small>{{noticia.publishedAt}}</small>
+                            <div class="col-md-3 col-sm-3 ml-auto mr-auto">
+                                <a href="{{noticia.url}}">
+                                    <img style="max-width:100%;max-height:100%;" class="img-rounded img-responsive" src="{{noticia.urlToImage}}" />
+                                    <br>
+                                    <h5 align="center">{{noticia.author}}</h5>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 ml-auto">
+                                <br>
+                                <a href="{{noticia.url}}">
+                                    <h6>{{noticia.title}}<br /><small>{{noticia.description}}</small></h6>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-2 ml-auto mr-auto">
+                                <label class="form-check-label">
+                                    <small>{{noticia.publishedAt}}</small>
+                                </label>
+                            </div>
                     </div>
-                    <img alt="Rounded Image" style="max-width:35%;max-height:35%;" class="img-rounded img-responsive" src="{{noticia.urlToImage}}" />
+                    <br>
+
                     <br>
                 </li>
             </ul>
