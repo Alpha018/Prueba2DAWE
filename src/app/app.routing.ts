@@ -11,6 +11,7 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 import { ErrorComponent } from './error/error.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { NoticiaDetalleComponent } from './noticia-detalle/noticia-detalle.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
 
 const routes: Routes = [
     { path: 'home',             component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'noticias',         component: NoticiasComponent },
     { path: 'noticiasdetalle/:autor/:descripcion/:fecha/:titulo/:url/:imagenUrl',         component: NoticiaDetalleComponent },
+    { path: 'favoritos',        component: FavoritosComponent},
     { path: '**',               component: ErrorComponent},
     { path: '', redirectTo: 'noticias', pathMatch: 'full' },
     { path: '', redirectTo: 'home', pathMatch: 'full' },

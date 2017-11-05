@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" >
   <div class="page-header page-header-xs bg-transparent" data-parallax="true" style="background-image: url('../assets/img/antoine-barres.jpg');">
     <div class="filter">
         <h1 style="color: white; font-weight: bold">
@@ -11,6 +11,12 @@
             {{titulo}}
         </h1>
     </div>
+    <input type="hidden" value="{{autor}}" #inputAutor>
+    <input type="hidden" value="{{descripcion}}" #inputDescripcion>
+    <input type="hidden" value="{{fecha}}" #inputFecha>
+    <input type="hidden" value="{{titulo}}" #inputTitulo>
+    <input type="hidden" value="{{url}}" #inputUrl>
+    <input type="hidden" value="{{imagenURL}}" #inputImgUrl>
     <div class="section profile-content">
         <div class="container">
             <div class="owner section">
@@ -28,9 +34,19 @@
                         <a href="{{url}}" target="_blank">
                         <button type="button" class="btn btn-outline-primary btn-round btn-lg">Ver Más</button>
                         </a>
-                        <button type="button" class="btn btn-outline-primary btn-round btn-lg">Agregar a favoritos</button>
+                        <button type="button" class="btn btn-outline-primary btn-round btn-lg" (click)="agregarFavorito(inputAutor.value, inputDescripcion.value, inputFecha.value, inputTitulo.value, inputUrl.value, inputImgUrl.value)">Agregar a favoritos</button>
                     </div>
                 </div>
+            </div>
+            <div *ngIf="getSucces()">
+                <ngb-alert [type]="'success'"  [dismissible]="false">
+                    <div class="container">
+                        Agregado a favoritos
+                        <button type="button" name="button" class="close" (click)="closeAlert()">
+                            <i class="nc-icon nc-simple-remove"></i>
+                        </button>
+                    </div>
+                </ngb-alert>
             </div>
         </div>
     </div>

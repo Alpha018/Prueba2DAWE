@@ -18,6 +18,7 @@ import { HomeModule } from './home/home.module';
 import { ErrorComponent } from './error/error.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { NoticiaDetalleComponent } from './noticia-detalle/noticia-detalle.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NoticiaDetalleComponent } from './noticia-detalle/noticia-detalle.compo
     FooterComponent,
     ErrorComponent,
     NoticiasComponent,
-    NoticiaDetalleComponent
+    NoticiaDetalleComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
