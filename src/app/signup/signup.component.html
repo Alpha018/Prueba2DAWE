@@ -19,11 +19,11 @@
                             </div>
                             <form class="register-form">
                                 <label>Email</label>
-                                <input type="text" class="form-control" placeholder="Email">
+                                <input type="text" class="form-control" placeholder="Email" #inputEmail>
 
                                 <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password">
-                                <button class="btn btn-danger btn-block btn-round">Register</button>
+                                <input type="password" class="form-control" placeholder="Password" #inputPass>
+                                <button class="btn btn-danger btn-block btn-round" (click)="login(inputEmail.value, inputPass.value)">Login</button>
                             </form>
                             <div class="forgot">
                                 <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
